@@ -12,10 +12,10 @@ type PropsType = {
 }
 
 const CardStringBold = ({ text = "" }) => (
-    <Typography Component="p" fontSize={12} bold={true} theme="black" margin={"0 5px 0 0"}>{text}</Typography>
+    <Typography Component="p" fontSize={12} lineHeight={22.5} bold={true} margin={"0 5px 0 0"}>{text}</Typography>
 )
 const CardStringDefault = ({ text = "" }) => (
-    <Typography Component="p" fontSize={12} theme="black">{text}</Typography>
+    <Typography Component="p" fontSize={12} lineHeight={22.5} theme="black">{text}</Typography>
 )
 
 

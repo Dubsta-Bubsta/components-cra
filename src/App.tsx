@@ -18,6 +18,12 @@ import {
 import { StepsMenu } from './components/Menus/StepsMenu/StepsMenu';
 import { Card } from './components/Card/Card';
 import { Selectors, SelectorType } from './components/Common/HorizontalSelectors/HorizontalSelectors';
+import { TableHead } from './components/Table/TableHead/TableHead';
+import TableRow from './components/Table/TableRow/TableRow';
+import { TableCell } from './components/Table/TableCell/TableCell';
+import { Table } from './components/Table/Table/Table';
+import { TableBody } from './components/Table/TableBody/TableBody';
+import { CardFullWidth } from './components/Card/CardFullWidth';
 
 
 function App() {
@@ -63,6 +69,10 @@ function App() {
                 <Card />
             </div>
 
+            <div style={{ margin: '100px' }}>
+                <CardFullWidth />
+            </div>
+
             <div style={{ margin: '30px' }}>
                 <Selectors selectors={selectors} activeSelector={activeSelector} setActiveSelector={setActiveSelector}/>
             </div>
@@ -75,6 +85,37 @@ function App() {
                     collapsed={true}
                 />
             </div>
+
+
+            <div style={{ margin: '30px' }}>
+           <Table>
+                <TableHead>
+                    <TableRow>
+                        <TableCell variant="head">Имя</TableCell>
+                        <TableCell variant="head">Почта</TableCell>
+                        <TableCell variant="head">Приоритет</TableCell>
+                        <TableCell variant="head">Принял / Дата</TableCell>
+                        <TableCell variant="head">Статус</TableCell>
+                    </TableRow>
+                </TableHead>
+                <TableBody>
+                    <TableRow>
+                        <TableCell>Vladimir V Vitkin</TableCell>
+                        <TableCell>ex@m.com</TableCell>
+                        <TableCell>-</TableCell>
+                        <TableCell>25.06.2020</TableCell>
+                        <TableCell>В работе</TableCell>
+                    </TableRow>
+                    <TableRow>
+                        <TableCell>Vladimir V Vitkin</TableCell>
+                        <TableCell>ex@m.com</TableCell>
+                        <TableCell>-</TableCell>
+                        <TableCell>25.06.2020</TableCell>
+                        <TableCell>В работе</TableCell>
+                    </TableRow>
+                </TableBody>
+            </Table>
+           </div>
         </div>
     );
 }

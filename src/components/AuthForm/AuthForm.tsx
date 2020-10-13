@@ -5,6 +5,7 @@ import defaultLogo from '../../assets/img/logo-vertical-white.svg'
 
 import LoginForm from './LoginForm'
 import RegisterForm from './RegisterForm'
+import Popup, { MaxWidthEnum } from '../Common/Popup/Popup'
 
 
 type PropsType = {
@@ -22,23 +23,22 @@ const AuthForm = ({ open, setOpen, ...props }: PropsType) => {
 
 	let renderComponent
 	if (authPhase === AuthPhaseEnum.login) {
-		renderComponent = <LoginForm setAuthPhase={setAuthPhase}/>
+		renderComponent = <LoginForm setAuthPhase={setAuthPhase} />
 	} else if (authPhase === AuthPhaseEnum.register) {
-		renderComponent = <RegisterForm setAuthPhase={setAuthPhase}/>
+		renderComponent = <RegisterForm setAuthPhase={setAuthPhase} />
 	}
 
 
 	return (
-		<div className={`auth__modal  ${open ? "active" : ""}`}>
-			<div className="modal__bg" onClick={() => setOpen(false) }></div>
+		<Popup open={open} setOpen={setOpen} maxWidth={MaxWidthEnum.md}>
 			<div className="modal__body">
 				<div className="body__preview">
-					<img src={defaultLogo} alt="itmo-logo"/>
+					<img src={defaultLogo} alt="itmo-logo" />
 				</div>
 
 				{renderComponent}
 			</div>
-		</div>
+		</Popup>
 	)
 }
 

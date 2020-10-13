@@ -1,0 +1,22 @@
+@import '../../../App.scss';
+
+.custom-table-cell {
+	display: table-cell;
+    padding: 16px;
+    font-size: 0.875rem;
+    text-align: left;
+    border-bottom: 1px solid $default_gray;
+	vertical-align: inherit;
+
+
+	&.cell-head {
+		
+	}
+	&.cell-body {
+
+
+		& .cell__content {
+			display: block;
+		}
+	}
+}

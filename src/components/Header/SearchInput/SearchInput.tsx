@@ -9,10 +9,11 @@ type PropsType = {
 	borderRadius?: "default" | "small"
 	placeholder?: string
 	collapsed?: boolean
+	withReset?: boolean
 }
 
 
-export const SearchInput = ({ theme="white", borderRadius="default", placeholder = "", collapsed = false, ...props }: PropsType) => {
+export const SearchInput = ({ theme="white", borderRadius="default", placeholder = "", collapsed = false, withReset = true, ...props }: PropsType) => {
 	const [searchText, setSearchText] = useState('')
 
 	return (
@@ -26,9 +27,9 @@ export const SearchInput = ({ theme="white", borderRadius="default", placeholder
 			/>
 			
 
-			<button className="search-block__icon close" onClick={() => { setSearchText("") }}>
+			{ withReset && <button className="search-block__icon close" onClick={() => { setSearchText("") }}>
 				<CloseIcon />
-			</button>
+			</button> }
 
 			<button className="search-block__icon search">
 				<SearchIcon />

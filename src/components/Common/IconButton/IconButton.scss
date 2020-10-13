@@ -2,10 +2,18 @@
 
 
 .icon-button {
-	height: 33px;
-	width: 33px;
+	
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	border-radius: 4px;
+
+	&.size-default {
+		height: 33px;
+		width: 33px;
+	}
+	&.size-small {
+		height: 25px;
+		width: 25px;
+	}
 }

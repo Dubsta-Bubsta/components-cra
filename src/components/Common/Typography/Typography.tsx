@@ -10,13 +10,14 @@ type PropsType = {
 	theme?: "black" | "gray" | "white"
 	bold?: boolean
 	fontSize?: number
+	lineHeight?: number
 	fontFamily?: string
 	margin?: number | string
 	padding?: number | string
 }
 
 
-export const Typography = ({ Component = "p", className, theme = "gray", bold = false, fontSize = 14, color, fontFamily = "Open Sans", padding, margin, ...props }: PropsType) => {
+export const Typography = ({ Component = "p", className, theme = "gray", bold = false, fontSize = 14, lineHeight, color, fontFamily = "Open Sans", padding, margin, ...props }: PropsType) => {
 
 	return (
 		<Component			
@@ -27,7 +28,8 @@ export const Typography = ({ Component = "p", className, theme = "gray", bold = 
 				color,
 				fontFamily,
 				padding,
-				margin
+				margin,
+				lineHeight: `${lineHeight}px`
 			}}
 		>
 			{props.children}

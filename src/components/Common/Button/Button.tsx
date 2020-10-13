@@ -3,7 +3,7 @@ import classNames from 'classnames'
 import './Button.scss'
 
 type PropsType = {
-	children: any,
+	children: React.ReactNode,
 	onClick?: () => void
 	bordered?: boolean
 	theme?: "blue" | "white"
@@ -13,12 +13,15 @@ type PropsType = {
 	borderRadius?: "default" | "small" | number 
 	margin?: number | string
 	padding?: number | string
+
+	Icon?: any
+	iconPosition?: "left" | "right"
 }
 
 
 
 
-export const Button = ({ children, onClick = () => {}, bordered = false, theme = "white", themeColor="", size = "default", variant = "filled", borderRadius = "default", margin, padding, ...props }: PropsType) => {
+export const Button = ({ children, onClick = () => {}, bordered = false, theme = "white", themeColor="", size = "default", variant = "filled", borderRadius = "default", margin, padding, Icon, iconPosition = "left", ...props }: PropsType) => {
 	let styleObject = {}
 	if (themeColor) {
 		if (variant === "filled") {
@@ -38,9 +41,13 @@ export const Button = ({ children, onClick = () => {}, bordered = false, theme =
 	}
 	
 	return (
+	
 		<button 
 			onClick={onClick}
-			className={classNames(`default-button ${theme} ${variant} border-${borderRadius} size-${size}`, { "bordered": bordered })}
+			className={classNames(`default-button ${theme} ${variant} border-${borderRadius} size-${size}`, { 
+				"bordered": bordered,
+				[`icon-${iconPosition}`]: Icon && iconPosition 
+			})}
 			style={{ 
 				borderRadius: typeof borderRadius === "number" ? `${borderRadius}px` : "",
 				margin,
@@ -48,6 +55,9 @@ export const Button = ({ children, onClick = () => {}, bordered = false, theme =
 				...styleObject
 			}}
 		>
+			{ Icon &&  <div className="button__icon">
+				<Icon />
+			</div> }
 			{children}
 		</button>
 	)

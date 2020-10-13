@@ -2,6 +2,7 @@ import classNames from 'classnames'
 import React, { useState } from 'react'
 import { NavLink } from 'react-router-dom'
 import './StepsMenu.scss'
+import { Typography } from '../../Common/Typography/Typography'
 type PropsType = {
     steps: Array<StepType>
     currentStep: number
@@ -21,7 +22,9 @@ export const StepsMenu = ({ steps, currentStep, ...props }: PropsType) => {
                     "active": counter === currentStep,
                     "next": counter > currentStep
                 })}>
-                    {step.title}
+                    <Typography theme="gray" bold={counter === currentStep} fontSize={14}>
+                        {step.title}
+                    </Typography>
                 </div>
             ))}
 

@@ -80,11 +80,11 @@
 	&.size {
 		&-small {
 			padding: 9px 13px 8px 13px;
-			min-width: 90px;
+			// min-width: 90px;
 			font-weight: bold;
 		}
 		&-default {
-			min-width: 105px;
+			// min-width: 105px;
 			padding: 12px 8px;
 		}
 	}
@@ -94,5 +94,25 @@
 		border-radius: 4px;
 	}
 
+	& .button__icon {
+		display: block;
+	}
+
+	&.icon {
+		&-left {
+			display: flex;
+			& .button__icon {
+				margin-right: 11px;
+			}
+		}
+		&-right {
+			display: flex;
+			flex-direction: row-reverse;
+			& .button__icon {
+				margin-right: 0px;
+				margin-left: 11px;
+			}
+		}
+	}
 	
 }
