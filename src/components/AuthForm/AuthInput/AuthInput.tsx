@@ -1,8 +1,5 @@
 import React from 'react'
-import classNames from 'classnames'
 import './AuthInput.scss'
-
-
 
 type PropsType = {
 	icon?: string

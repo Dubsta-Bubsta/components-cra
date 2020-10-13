@@ -1,21 +1,20 @@
 import React from 'react'
-import classNames from 'classnames'
 import './AuthForm.scss'
 import { FormTitle, AuthPhaseEnum } from './AuthForm'
 import { Button } from '../Common/Button/Button'
 import { AuthInput } from './AuthInput/AuthInput'
 
-import lockIcon from '../../assets/lock-icon.svg'
+import lockIcon from '../../assets/img/lock-icon.svg'
 import Checkbox from './Checkbox/Checkbox'
 
-import googleIcon from '../../assets/google-icon.svg'
-import ieIcon from '../../assets/ie-icon.svg'
-import mozilaIcon from '../../assets/mozila-icon.svg'
-import safariIcon from '../../assets/safari-icon.svg'
-import horizontalLogo from '../../assets/logo-horizontal-blue.svg'
+import googleIcon from '../../assets/img/google-icon.svg'
+import ieIcon from '../../assets/img/ie-icon.svg'
+import mozilaIcon from '../../assets/img/mozila-icon.svg'
+import safariIcon from '../../assets/img/safari-icon.svg'
+import horizontalLogo from '../../assets/img/logo-horizontal-blue.svg'
 
-import phoneIcon from '../../assets/phone-icon.svg'
-import userIcon from '../../assets/user-icon.svg'
+import phoneIcon from '../../assets/img/phone-icon.svg'
+import userIcon from '../../assets/img/user-icon.svg'
 
 
 type PropsType = {

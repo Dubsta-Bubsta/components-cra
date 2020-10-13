@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react'
 import classNames from 'classnames'
 import './Dropdown.scss'
-import styled from 'styled-components'
 import { DropdownArrow } from '../Svg/Svg'
 
 type PropsType = {

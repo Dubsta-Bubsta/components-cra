@@ -1,13 +1,12 @@
-import React from 'react'
-import classNames from 'classnames'
+import React, { useState } from 'react'
 import './Header.scss'
-import styled from 'styled-components'
 import { Link } from 'react-router-dom'
-import defaultLogo from '../../../assets/logo-horizontal-blue.svg'
-import libraryLogo from '../../../assets/itmo-library-logo.svg'
+import defaultLogo from '../../../assets/img/logo-horizontal-blue.svg'
+import libraryLogo from '../../../assets/img/itmo-library-logo.svg'
 import { SearchInput } from '../SearchInput/SearchInput'
 import { Button } from '../../Common/Button/Button'
 import { Dropdown } from '../../Common/Dropdown/Dropdown'
+import AuthForm from '../../AuthForm/AuthForm'
 
 type PropsType = {
 	
@@ -15,6 +14,8 @@ type PropsType = {
 
 
 export const DefaultHeader = ({ ...props }: PropsType) => {
+	const [modalOpen, setModalOpen] = useState(false)
+
 	return (
 		<div className="header__holder">
 			<header className="header__content white">
@@ -32,13 +33,17 @@ export const DefaultHeader = ({ ...props }: PropsType) => {
 					]}
 				/>
 
-            	<Button theme="blue" variant="outlined" margin={'0 0 0 12.5px'}>Войти</Button>
+				<Button onClick={() => { setModalOpen(true) }} theme="blue" variant="outlined" margin={'0 0 0 12.5px'}>Войти</Button>
 			</header>
+			<AuthForm open={modalOpen} setOpen={setModalOpen} />
+
 		</div>
 	)
 }
 
 export const CustomHeader = ({ ...props }: PropsType) => {
+	const [modalOpen, setModalOpen] = useState(false)
+
 	return (
 		<div className="header__holder">
 			<header className="header__content blue">
@@ -57,7 +62,9 @@ export const CustomHeader = ({ ...props }: PropsType) => {
 					]}
 				/>
 
-            	<Button theme="white" variant="outlined" margin={'0 0 0 12.5px'}>Войти</Button>
+				<Button onClick={() => { setModalOpen(true) }} theme="white" variant="outlined" margin={'0 0 0 12.5px'}>Войти</Button>
+			<AuthForm open={modalOpen} setOpen={setModalOpen} />
+				
 			</header>
 		</div>
 	)

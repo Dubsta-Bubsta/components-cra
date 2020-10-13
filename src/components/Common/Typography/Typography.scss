@@ -1,0 +1,47 @@
+@import '../../../App.scss';
+.typography {
+
+    &.black {
+        color: $font_black;
+    }
+    &.gray {
+        color: $font_gray;
+    }
+    &.white {
+        color: $white;
+    }
+
+    &.bold {
+        font-weight: bold;
+    }
+
+    &-p {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 16px;
+    }
+    &-h1 {
+        font-weight: bold;
+    }
+    &-h2 {
+        font-weight: bold;
+
+    }
+    &-h3 {
+        font-weight: bold;
+
+    }
+    &-h4 {
+        font-weight: bold;
+
+    }
+    &-h5 {
+        font-weight: bold;
+
+    }
+    &-h6 {
+        font-weight: bold;
+
+    }
+}

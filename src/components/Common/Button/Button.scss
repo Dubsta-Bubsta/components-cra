@@ -7,13 +7,15 @@
 	font-size: 14px;
 	line-height: 14px;
 	border-radius: 0px;
-	min-width: 105px;
 	box-sizing: border-box;
-	padding: 12px 8px;
 	border: 1px solid $white;
 	background: #fff;
 	cursor: pointer;
 	white-space: nowrap;
+	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 
 	&.white {
 		&.outlined {
@@ -49,12 +51,41 @@
 		}
 	}
 
+	&.green {
+		&.filled {
+			color: $white;
+			border-color: $light_green;
+			background: $light_green;
+		}
+	}
+
+	&.coral-blue {
+		&.filled {
+			color: $white;
+			border-color: $coral_blue;
+			background: $coral_blue;
+		}
+	}
+
+
 	&.border {
 		&-small {
 			border-radius: 2px;
 		}
 		&-default {
 			border-radius: 4px;
+		}
+	}
+
+	&.size {
+		&-small {
+			padding: 9px 13px 8px 13px;
+			min-width: 90px;
+			font-weight: bold;
+		}
+		&-default {
+			min-width: 105px;
+			padding: 12px 8px;
 		}
 	}
 

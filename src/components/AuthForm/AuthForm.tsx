@@ -1,9 +1,6 @@
 import React, { useState } from 'react'
-import classNames from 'classnames'
 import './AuthForm.scss'
-import styled from 'styled-components'
-import { Link } from 'react-router-dom'
-import defaultLogo from '../../assets/logo-vertical-white.svg'
+import defaultLogo from '../../assets/img/logo-vertical-white.svg'
 
 
 import LoginForm from './LoginForm'

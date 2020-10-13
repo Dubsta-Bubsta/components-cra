@@ -23,15 +23,16 @@
 		height: 100%;
 		width: 100%;
 		z-index: 3;
-		background: rgba(0, 0, 0, 0.082);
+		background: rgba(0, 0, 0, 0.2);
 	}
 
 	& .modal__body {
 		z-index: 4;
-		height: 600px;
+		min-height: 600px;
 		display: flex;
 		display: grid;
 		grid-template-columns: 2fr 3fr;
+		border: 1px solid $dark_gray;
 		& .body__preview {
 			background: $default_blue;
 			display: flex;

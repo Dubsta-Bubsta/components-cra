@@ -1,6 +1,5 @@
 import React from 'react'
 import './Checkbox.scss'
-import classNames from 'classnames'
 
 const Checkbox = ({ label = "" }) => {
 	return (

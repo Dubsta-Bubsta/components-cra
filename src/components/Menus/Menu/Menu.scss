@@ -1,0 +1,44 @@
+@import '../../../App.scss';
+
+.menu__links {
+    background: #FFFFFF;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    padding: 26px 20px;
+    width: fit-content;
+
+    & .menu__link {
+        margin-bottom: 25px;
+        display: flex;
+        align-items: center;  
+       
+
+        & .link__icon {
+            margin-right: 14px;
+            & svg path {
+                fill: $light_red;
+            }
+            &.noFill {
+                & svg path {
+                    fill: none;
+                }
+            }
+        }
+
+        & .link__title {
+            color: $font_gray;
+        }
+
+        &.active {
+            & .link__title {
+                font-weight: bold;
+                color: $font_black;
+            }
+        }
+       
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}

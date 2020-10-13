@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import classNames from 'classnames'
 import './SearchInput.scss'
 import { CloseIcon, SearchIcon } from '../../Common/Svg/Svg'
-import { Button } from '../../Common/Button/Button'
 
 
 type PropsType = {
