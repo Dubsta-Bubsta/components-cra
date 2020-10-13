@@ -1,0 +1,67 @@
+@import '../../../App.scss';
+
+.default-button {
+	font-family: $muller;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 14px;
+	line-height: 14px;
+	border-radius: 0px;
+	min-width: 105px;
+	box-sizing: border-box;
+	padding: 12px 8px;
+	border: 1px solid $white;
+	background: #fff;
+	cursor: pointer;
+	white-space: nowrap;
+
+	&.white {
+		&.outlined {
+			color: $white;
+			border-color: $white;
+			background: transparent;
+		}
+
+		&.filled {
+			color: $black;
+			border-color: $white;
+			background: $white;
+		}
+		&:focus {
+			border-color: $white;
+		}
+	}
+
+	&.blue {
+		&.outlined {
+			color: $default_blue;
+			border-color: $default_blue;
+			background: transparent;
+		}
+
+		&.filled {
+			color: $white;
+			border-color: $default_blue;
+			background: $default_blue;
+		}
+		&:focus {
+			border-color: $default_blue;
+		}
+	}
+
+	&.border {
+		&-small {
+			border-radius: 2px;
+		}
+		&-default {
+			border-radius: 4px;
+		}
+	}
+
+
+	&.bordered {
+		border-radius: 4px;
+	}
+
+	
+}

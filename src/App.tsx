@@ -1,26 +1,22 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import './App.scss';
+import { Button } from './components/Common/Button/Button';
+import { DefaultHeader, CustomHeader } from './components/Header/DefaultHeader/Headers';
+import AuthForm from './components/AuthForm/AuthForm';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const [modalOpen, setModalOpen] = useState(false)
+    return (
+        <div className="App">
+            <DefaultHeader />
+            <CustomHeader />
+
+
+            <Button variant="filled" theme="blue" onClick={() => { setModalOpen(true) }}>ФОРМА</Button>
+            <AuthForm open={modalOpen} setOpen={setModalOpen} />
+
+        </div>
+    );
 }
 
 export default App;
