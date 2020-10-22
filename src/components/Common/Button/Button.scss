@@ -36,34 +36,34 @@
 
 	&.blue {
 		&.outlined {
-			color: $default_blue;
-			border-color: $default_blue;
+			color: $main_blue;
+			border-color: $main_blue;
 			background: transparent;
 		}
 
 		&.filled {
 			color: $white;
-			border-color: $default_blue;
-			background: $default_blue;
+			border-color: $main_blue;
+			background: $main_blue;
 		}
 		&:focus {
-			border-color: $default_blue;
+			border-color: $main_blue;
 		}
 	}
 
 	&.green {
 		&.filled {
 			color: $white;
-			border-color: $light_green;
-			background: $light_green;
+			border-color: $green;
+			background: $green;
 		}
 	}
 
 	&.coral-blue {
 		&.filled {
 			color: $white;
-			border-color: $coral_blue;
-			background: $coral_blue;
+			border-color: $light_blue;
+			background: $light_blue;
 		}
 	}
 
@@ -80,11 +80,11 @@
 	&.size {
 		&-small {
 			padding: 9px 13px 8px 13px;
-			// min-width: 90px;
+			min-width: 90px;
 			font-weight: bold;
 		}
 		&-default {
-			// min-width: 105px;
+			min-width: 105px;
 			padding: 12px 8px;
 		}
 	}

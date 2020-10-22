@@ -12,10 +12,10 @@ type PropsType = {
 }
 
 const CardStringBold = ({ text = "" }) => (
-    <Typography Component="p" fontSize={12} lineHeight={22.5} bold={true} margin={"0 5px 0 0"}>{text}</Typography>
+    <Typography variant="p" fontSize={12} lineHeight={22.5} bold={true} margin={"0 5px 0 0"}>{text}</Typography>
 )
 const CardStringDefault = ({ text = "" }) => (
-    <Typography Component="p" fontSize={12} lineHeight={22.5} theme="black">{text}</Typography>
+    <Typography variant="p" fontSize={12} lineHeight={22.5} theme="black">{text}</Typography>
 )
 
 
@@ -25,7 +25,7 @@ export const Card = ({...props }: PropsType) => {
     return (
         <Box padding={"38px 19px 19px 19px"} className="card">
             <div className="card__content">
-                <Typography Component="h3" fontSize={18} margin={"0 0 10px 0"} theme="black">Исследования наноструктурных, углеродных и сверхтвердых материалов</Typography>
+                <Typography variant="h3" fontSize={18} margin={"0 0 10px 0"} theme="black">Исследования наноструктурных, углеродных и сверхтвердых материалов</Typography>
                 
                 <div className="content__string">
                     <CardStringBold text="Базовая организация:"/>

@@ -32,7 +32,7 @@ export const Selectors = ({ collapsed = false, selectors, activeSelector, setAct
                     data-id={`selector-${selector.id}`}
                 >
                     <Typography
-                        Component="p"
+                        variant="p"
                         fontFamily="Muller"
                         fontSize={14}
                         bold={activeSelector.id === selector.id}

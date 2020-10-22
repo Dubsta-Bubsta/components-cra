@@ -5,9 +5,9 @@
 	margin: 0 15px;
 	&.blue {
 		& .selector__active {
-			color: $default_blue;
+			color: $main_blue;
 			& svg path {
-				fill: $default_blue;
+				fill: $main_blue;
 			}
 		}
 	}

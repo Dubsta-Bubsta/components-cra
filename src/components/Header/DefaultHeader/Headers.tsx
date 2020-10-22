@@ -5,7 +5,7 @@ import defaultLogo from '../../../assets/img/logo-horizontal-blue.svg'
 import libraryLogo from '../../../assets/img/itmo-library-logo.svg'
 import { SearchInput } from '../SearchInput/SearchInput'
 import { Button } from '../../Common/Button/Button'
-import { Dropdown } from '../../Common/Dropdown/Dropdown'
+import Dropdown from '../../Common/Dropdown/Dropdown'
 import AuthForm from '../../AuthForm/AuthForm'
 
 type PropsType = {

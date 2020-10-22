@@ -9,7 +9,7 @@
 		grid-template-columns: 2fr 3fr;
 		border: 1px solid $dark_gray;
 		& .body__preview {
-			background: $default_blue;
+			background: $main_blue;
 			display: flex;
 			align-items: center;
 			justify-content: center;
@@ -99,7 +99,7 @@
 					margin: 10px 0 20px 0;
 					& .contact-us__text {
 						margin-left: 5px;
-						color: $coral_blue;
+						color: $light_blue;
 						font-weight: bold;
 						font-size: 16px;
 						line-height: 22px;

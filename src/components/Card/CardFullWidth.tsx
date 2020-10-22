@@ -12,10 +12,10 @@ type PropsType = {
 }
 
 const CardStringBold = ({ text = "" }) => (
-    <Typography Component="p" fontSize={14} lineHeight={27} bold={true} theme="black" margin={"0 5px 0 0"}>{text}</Typography>
+    <Typography variant="p" fontSize={14} lineHeight={27} bold={true} theme="black" margin={"0 5px 0 0"}>{text}</Typography>
 )
 const CardStringDefault = ({ text = "" }) => (
-    <Typography Component="p" fontSize={14} lineHeight={27} theme="black">{text}</Typography>
+    <Typography variant="p" fontSize={14} lineHeight={27} theme="black">{text}</Typography>
 )
 
 
@@ -24,7 +24,7 @@ export const CardFullWidth = ({ ...props }: PropsType) => {
     return (
         <div className={`card fullWidth`}>
             <div className="card__content">
-                <Typography Component="h3" fontSize={24} margin={"0 0 10px 0"} theme="black">Исследования наноструктурных, углеродных и сверхтвердых материалов</Typography>
+                <Typography variant="h3" fontSize={24} margin={"0 0 10px 0"} theme="black">Исследования наноструктурных, углеродных и сверхтвердых материалов</Typography>
 
                 <Flex jusifyContent={'sb'} alignItems="end">
                    <div style={{ width: '100%' }}>

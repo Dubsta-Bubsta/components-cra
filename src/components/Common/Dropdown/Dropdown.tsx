@@ -14,7 +14,7 @@ export type SelectorType = {
 }
 
 
-export const Dropdown = ({ theme = "white", selectors = [],...props }: PropsType) => {
+const Dropdown = ({ theme = "white", selectors = [],...props }: PropsType) => {
 	
 	const [activeSelector, setActiveSelector] = useState({} as SelectorType)
 
@@ -57,3 +57,5 @@ export const Dropdown = ({ theme = "white", selectors = [],...props }: PropsType
 		</div>
 	)
 }
+
+export default Dropdown

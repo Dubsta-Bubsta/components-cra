@@ -2,7 +2,6 @@
 
 .header__holder {
 	height: 108px;
-	width: 100vw;
 	position: relative;
 
 	& .header__content {
@@ -23,7 +22,7 @@
 		}
 
 		&.blue {
-			background: $default_blue;
+			background: $main_blue;
 		}
 
 		& .header__logo {

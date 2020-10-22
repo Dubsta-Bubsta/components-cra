@@ -24,6 +24,9 @@ import { TableCell } from './components/Table/TableCell/TableCell';
 import { Table } from './components/Table/Table/Table';
 import { TableBody } from './components/Table/TableBody/TableBody';
 import { CardFullWidth } from './components/Card/CardFullWidth';
+import Input from './components/Common/FormComponents/Input/Input';
+import Dropdown from './components/Common/FormComponents/Dropdown/Dropdown';
+import Tooltip from './components/Common/Tooltip/Tooltip';
 
 
 function App() {
@@ -35,6 +38,14 @@ function App() {
     ] as Array<SelectorType>
     const [activeSelector, setActiveSelector] = useState(selectors[0])
 
+
+
+    const dropdownData = [
+        { id: 1, value: 'А', disabled: true },
+        { id: 2, value: 'Б' },
+        { id: 3, value: 'С' }
+    ]
+    const [selectedValue, setSelectedValue] = useState(dropdownData[0].id)
 
     return (
         <div className="App">
@@ -85,7 +96,23 @@ function App() {
                     collapsed={true}
                 />
             </div>
+            <div style={{ margin: 30 }}>
+                <Input
+                    inputProps={{
+                        placeholder: 'Введите строку'
+                    }}
+                    isSuccess={true}
+                    helperText="Подсказка"
+                />
+            </div>
 
+            <div style={{ margin: 30 }}>
+                <Dropdown
+                    data={dropdownData}
+                    selectedID={selectedValue}
+                    handleChange={setSelectedValue}
+                />
+            </div>
 
             <div style={{ margin: '30px' }}>
            <Table>
@@ -115,7 +142,30 @@ function App() {
                     </TableRow>
                 </TableBody>
             </Table>
+            </div>
+            
+            <div style={{ margin: 30 }}>
+                <Tooltip
+                    type="error"
+                    title="Lorem ipsum dolor sit amet consectetur"               
+                    description=" Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit, quaerat! Magnam excepturi illum quibusdam. Enim consequatur quidem assumenda maxime eaque?"
+                />
+            </div>
+            <div style={{ margin: 30 }}>
+                <Tooltip
+                    type="default"
+                    title="Lorem ipsum dolor sit amet consectetur"               
+                    description=" Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit, quaerat! Magnam excepturi illum quibusdam. Enim consequatur quidem assumenda maxime eaque?"
+                />
+            </div>
+            <div style={{ margin: 30 }}>
+                <Tooltip
+                    type="success"
+                    title="Lorem ipsum dolor sit amet consectetur"               
+                    description=" Lorem ipsum dolor sit amet consecuri illum qassumenda maxime eaque?"
+                />
            </div>
+           
         </div>
     );
 }

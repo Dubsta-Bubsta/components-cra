@@ -16,7 +16,7 @@
         & .link__icon {
             margin-right: 14px;
             & svg path {
-                fill: $light_red;
+                fill: $red;
             }
             &.noFill {
                 & svg path {
@@ -26,13 +26,13 @@
         }
 
         & .link__title {
-            color: $font_gray;
+            color: $default_gray;
         }
 
         &.active {
             & .link__title {
                 font-weight: bold;
-                color: $font_black;
+                color: $default_black;
             }
         }
        
