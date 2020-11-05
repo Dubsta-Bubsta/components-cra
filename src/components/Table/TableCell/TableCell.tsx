@@ -26,7 +26,4 @@ export const TableCell = ({ variant = "body", ...props }: PropsType) => {
 			</td>
 		)
 	}
-
-	
-	
-}
+};

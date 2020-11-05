@@ -12,4 +12,4 @@ export const Table = ({ ...props }: PropsType) => {
 			{props.children}
 		</div>
 	)
-}
+};

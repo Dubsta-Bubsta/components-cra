@@ -12,4 +12,4 @@ export const TableBody = ({ ...props }: PropsType) => {
 			{props.children}
 		</tbody>
 	)
-}
+};
